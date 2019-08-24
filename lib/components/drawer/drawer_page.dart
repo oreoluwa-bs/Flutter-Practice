@@ -22,6 +22,14 @@ class DrawerPage extends StatelessWidget {
           ListTile(
             title: Text('Lists'),
             onTap: () {},
+          ),
+          ListTile(
+            title: Text('Bookmarks'),
+            onTap: () {},
+          ),
+          ListTile(
+            title: Text('Moments'),
+            onTap: () {},
           )
         ],
       ),

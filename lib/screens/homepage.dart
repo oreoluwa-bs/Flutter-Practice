@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../components/buttons/add_tweet_button.dart';
+import '../components/buttons/floating_button.dart';
 import '../components/drawer/drawer_page.dart';
 
 class HomePage extends StatefulWidget {
@@ -34,7 +34,7 @@ class _HomePageState extends State<HomePage> {
         ],
       ),
       drawer: DrawerPage(),
-      floatingActionButton: AddTweetNavigator(),
+      floatingActionButton: FloatingButtn(Icons.create),
     );
   }
 }

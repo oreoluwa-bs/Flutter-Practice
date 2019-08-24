@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../components/buttons/add_tweet_button.dart';
+import '../components/buttons/floating_button.dart';
 import '../components/drawer/drawer_page.dart';
 
 class SearchView extends StatefulWidget {
@@ -16,51 +16,62 @@ class _SearchViewState extends State<SearchView> {
     return Scaffold(
       key: _scaffoldKey,
       appBar: AppBar(
-        title: Text(
-          'Search',
-          style: TextStyle(color: Colors.black),
+        title: new TextField(
+          style: TextStyle(fontSize: 20.0, color: Color(0xFFbdc6cf)),
+          decoration: new InputDecoration(
+            contentPadding:
+                const EdgeInsets.only(left: 20.0, bottom: 8.0, top: 8.0),
+            filled: true,
+            fillColor: Colors.blue[50],
+            hintText: 'Search Twitter',
+            enabledBorder: const OutlineInputBorder(
+              gapPadding: 4,
+              borderRadius: BorderRadius.horizontal(
+                left: Radius.circular(40),
+                right: Radius.circular(40),
+              ),
+              borderSide: const BorderSide(color: Colors.grey, width: 1.0),
+            ),
+            focusedBorder: const OutlineInputBorder(
+              gapPadding: 4,
+              borderRadius: BorderRadius.horizontal(
+                left: Radius.circular(40),
+                right: Radius.circular(40),
+              ),
+              borderSide: const BorderSide(color: Colors.grey, width: 1.0),
+            ),
+            border: const OutlineInputBorder(
+              gapPadding: 4,
+              borderRadius: BorderRadius.horizontal(
+                left: Radius.circular(40),
+                right: Radius.circular(40),
+              ),
+              borderSide: const BorderSide(color: Colors.grey, width: 1.0),
+            ),
+          ),
         ),
+        // title: Text(
+        //   'Search',
+        //   style: TextStyle(color: Colors.black),
+        // ),
         leading: IconButton(
           icon: Icon(Icons.person),
           onPressed: () {
             _scaffoldKey.currentState.openDrawer();
           },
         ),
-      ),
-      drawer: DrawerPage(),
-      body: Center(
-        child: Icon(Icons.search, size: 100, color: Colors.red),
-      ),
-      floatingActionButton: AddTweetNavigator(),
-    );
-  }
-}
-
-class DrawerPage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Drawer(
-      child: ListView(
-        padding: EdgeInsets.zero,
-        children: <Widget>[
-          DrawerHeader(
-            child: Text('Drawer Header'),
-            decoration: BoxDecoration(
-              color: Colors.blue,
-            ),
-          ),
-          ListTile(
-            title: Text('Profile'),
-            onTap: () {
-              Navigator.pop(context);
-            },
-          ),
-          ListTile(
-            title: Text('Lists'),
-            onTap: () {},
+        actions: <Widget>[
+          IconButton(
+            icon: Icon(Icons.settings),
+            onPressed: () {},
           )
         ],
       ),
+      drawer: DrawerPage(),
+      body: Center(
+        child: Icon(Icons.inbox, size: 100, color: Colors.orange),
+      ),
+      floatingActionButton: FloatingButtn(Icons.create),
     );
   }
 }
