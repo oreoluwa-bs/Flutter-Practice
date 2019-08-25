@@ -30,30 +30,20 @@ class _SearchViewState extends State<SearchView> {
                 left: Radius.circular(40),
                 right: Radius.circular(40),
               ),
-              borderSide: const BorderSide(color: Colors.grey, width: 1.0),
+              borderSide: const BorderSide(color: Colors.black12, width: 1.0),
             ),
             focusedBorder: const OutlineInputBorder(
-              gapPadding: 4,
-              borderRadius: BorderRadius.horizontal(
-                left: Radius.circular(40),
-                right: Radius.circular(40),
-              ),
-              borderSide: const BorderSide(color: Colors.grey, width: 1.0),
+              borderSide: const BorderSide(color: Colors.black12, width: 0.0),
             ),
             border: const OutlineInputBorder(
-              gapPadding: 4,
               borderRadius: BorderRadius.horizontal(
                 left: Radius.circular(40),
                 right: Radius.circular(40),
               ),
-              borderSide: const BorderSide(color: Colors.grey, width: 1.0),
+              borderSide: const BorderSide(color: Colors.black12 , width: 1.0),
             ),
           ),
         ),
-        // title: Text(
-        //   'Search',
-        //   style: TextStyle(color: Colors.black),
-        // ),
         leading: IconButton(
           icon: Icon(Icons.person),
           onPressed: () {
