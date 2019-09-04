@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../components/buttons/floating_button.dart';
+import '../components/tweet.dart';
 import '../components/drawer/drawer_page.dart';
 
 class HomePage extends StatefulWidget {
@@ -32,6 +33,9 @@ class _HomePageState extends State<HomePage> {
             onPressed: () {},
           )
         ],
+      ),
+      body: Column(
+        children: <Widget>[Tweet()],
       ),
       drawer: DrawerPage(),
       floatingActionButton: FloatingButtn(Icons.create),

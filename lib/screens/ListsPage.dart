@@ -7,10 +7,11 @@ class ListsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          title: Text(
-        'Lists',
-        style: TextStyle(color: Colors.black),
-      )),
+        title: Text(
+          'Lists',
+          style: TextStyle(color: Colors.black),
+        ),
+      ),
       floatingActionButton: FloatingButtn(Icons.note_add),
     );
   }
