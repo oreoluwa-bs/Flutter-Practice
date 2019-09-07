@@ -35,7 +35,10 @@ class _HomePageState extends State<HomePage> {
         ],
       ),
       body: Column(
-        children: <Widget>[Tweet()],
+        children: <Widget>[
+          Tweet(),
+          Tweet(),
+        ],
       ),
       drawer: DrawerPage(),
       floatingActionButton: FloatingButtn(Icons.create),

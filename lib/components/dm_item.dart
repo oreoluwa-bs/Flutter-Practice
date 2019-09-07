@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class Tweet extends StatelessWidget {
+class DMItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -20,30 +20,32 @@ class Tweet extends StatelessWidget {
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 10),
             child: Column(
-              // mainAxisAlignment: MainAxisAlignment.spaceAround,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
                 Row(
                   children: <Widget>[
-                    Text('Tyler, The Creator'),
-                    Text('@tylerthecreator'),
-                    Text('~12h')
+                    Row(
+                      children: <Widget>[
+                        Text(
+                          'Tyler, The Creator',
+                          style: TextStyle(fontWeight: FontWeight.bold),
+                        ),
+                        Text('@tylerthecreator'),
+                      ],
+                    ),
+                    Text('12h'),
                   ],
                 ),
-                Text(
-                  'My Dms are now opened for friendship shots.',
-                  overflow: TextOverflow.ellipsis,
+                Padding(
+                  padding: EdgeInsets.symmetric(vertical: 5),
+                  child: Text(
+                    'My Dms are now opened for friendship shots.',
+                    overflow: TextOverflow.ellipsis,
+                  ),
                 ),
               ],
             ),
           ),
-          Icon(Icons.expand_more),
-          // IconButton(
-          //   // alignment: Alignment.centerLeft,
-          //   padding: new EdgeInsets.only(left: 0,right: 0),
-          //   onPressed: () {},
-          //   icon: Icon(Icons.expand_more),
-          // )
         ],
       ),
     );

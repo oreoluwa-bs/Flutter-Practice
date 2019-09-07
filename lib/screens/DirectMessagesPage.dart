@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_tut/components/buttons/floating_button.dart';
 
+import '../components/buttons/floating_button.dart';
 import '../components/drawer/drawer_page.dart';
+import '../components/dm_item.dart';
 
 class DirectMessageView extends StatefulWidget {
   @override
@@ -34,8 +35,10 @@ class _DirectMessageViewState extends State<DirectMessageView> {
         ],
       ),
       drawer: DrawerPage(),
-      body: Center(
-        child: Icon(Icons.inbox, size: 100, color: Colors.orange),
+      body: Row(
+        children: <Widget>[
+          DMItem(),
+        ],
       ),
       floatingActionButton: FloatingButtn(Icons.add),
     );
